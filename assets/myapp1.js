@@ -12,7 +12,6 @@ var roomname = params["roomname"];
 $(function () {
   BindEvent();
 });
-
 function one() {
   var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   var charactersLength = characters.length;
@@ -208,7 +207,7 @@ function remote(){
     var response1 = JSON.parse(xhr.responseText);
     for (i = 0; i < response1.length; i++) {
      var temp=response1[i]["id"].toString() ;
-     if(temp == "34689" || temp == "37379" || temp == "40419" || temp == "34691" || temp == "56860" || temp == "56175" || temp == "56196" ||  temp == "47971"){
+     if(temp == "34689" || temp == "37379" || temp == "40419" || temp == "34691" || temp == "56860" || temp == "56175" || temp == "56196" ){
        var state;
        if(response1[i]["online"]==true)
         {
@@ -240,11 +239,6 @@ function remote(){
       if(IMAC1=="offline"){
           document.getElementById("IMAC1").style.backgroundColor="gray";
           document.getElementById("IMAC1").disabled = true;
-      }
-      var SADESKTOP= document.getElementById("47971").innerHTML.toString();
-      if(SADESKTOP=="offline"){
-          document.getElementById("SADESKTOP").style.backgroundColor="gray";
-          document.getElementById("SADESKTOP").disabled = true;
       }
       var CREWWindows1ProSA= document.getElementById("56860").innerHTML.toString();
       if(CREWWindows1ProSA=="offline"){
@@ -332,22 +326,6 @@ function IMAC2(){
           window.open("/meet-pro", "_blank");
       }
   }
-}
-function SADESKTOP(){
-    var Url = "https://api.getscreen.me/v1/agents/connect?apikey=edPiIV29BKYdSI6lffw7NjEvBodXP4B84GJnfZFTVTvOFSfGEMkck44WlyFjm0fU&agent_id=47971";
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', Url, true);
-    xhr.send();
-    xhr.onreadystatechange = processRequest;
-    function processRequest(e) {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            var response1 = JSON.parse(xhr.responseText);
-            sessionStorage.setItem("Url", response1.data['url']);
-            sessionStorage.setItem("EmployeeName", "Crew");
-            sessionStorage.setItem("RoomName", "SADESKTOP");
-            window.open("/meet-pro", "_blank");
-        }
-    }
 }
 function CREWWindows1ProSA(){
     var Url = "https://api.getscreen.me/v1/agents/connect?apikey=edPiIV29BKYdSI6lffw7NjEvBodXP4B84GJnfZFTVTvOFSfGEMkck44WlyFjm0fU&agent_id=56860";
