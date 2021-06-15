@@ -41,7 +41,8 @@ function one() {
 function exportToclip() {
     //https://crewmeetpro.page.link/?link=https://meet.crewsa.net/Join-Meeting?roomname%3Dxxxxxxxx%26membername%3Dgust&apn=com.example.crewmeetpro&isi=1561006562&ibi=com.example.crewmeetpro
     //navigator.clipboard.writeText("https://crewmeetpro.page.link/?link=https://meet.crewsa.net/Join-Meeting?roomname%3D" + result + "%26membername%3Dgust&apn=com.example.crewmeetpro&isi=1561006562&ibi=com.example.crewmeetpro");
-    navigator.clipboard.writeText("https://crewmeetpro.page.link/?link=https://meet.crewsa.net/Join-Meeting?roomname%3D" + result + "%26membername%3Dgust&apn=crew.teamigroup.meet&isi=1561006562&ibi=com.example.crewmeetpro");
+    //navigator.clipboard.writeText("https://crewmeetpro.page.link/?link=https://meet.crewsa.net/Join-Meeting?roomname%3D" + result + "%26membername%3Dgust&apn=crew.teamigroup.meet&isi=1561006562&ibi=com.example.crewmeetpro");
+    navigator.clipboard.writeText("https://go.crewsa.net/"+ result);
     //navigator.clipboard.writeText("https://crewmeetpro.page.link/?link=https://meet.crewsa.net/Join-Meeting?roomname=" + result + "&membername=-&apn=com.example.crewmeetpro");
 }
 var apiObj = null;
